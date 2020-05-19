@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.drawerlayout.widget.DrawerLayout android:id="@+id/drawer_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white">
+
+    <!--内容区-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/title_layout"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="15dp">
+
+            <TextView
+                android:id="@+id/tv_toggle_view"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentLeft="true"
+                android:background="@mipmap/category"
+                android:layout_centerVertical="true" />
+
+            <TextView
+                android:id="@+id/tv_search_view"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:background="@mipmap/b_p"
+                android:layout_centerVertical="true" />
+            <net.lucode.hackware.magicindicator.MagicIndicator
+                android:id="@+id/magic_indicator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="42dp"
+                android:layout_marginEnd="42dp"
+                android:layout_toLeftOf="@id/tv_search_view"
+                android:layout_toRightOf="@id/tv_toggle_view" />
+
+        </RelativeLayout>
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/title_layout"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></RelativeLayout><!--存放侧滑菜单-->
+
+</androidx.drawerlayout.widget.DrawerLayout>

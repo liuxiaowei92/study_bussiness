@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+
+        <!--实现沉浸式状态栏-->
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <!--修改状态栏的颜色-->
+        <item name="statusBarBackground">@android:color/transparent</item>
+        <item name="android:fitsSystemWindows">true</item>
+        <!--允许activity的transition转场动画-->
+
+    </style>
+</resources>

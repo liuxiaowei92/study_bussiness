@@ -1,5 +1,5 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
-
+apply from:this.rootProject.file('config.gradle')
 buildscript {
     
     repositories {
@@ -20,9 +20,6 @@ buildscript {
                 password 'liuxiaowei921019'
             }
         }
-
-
-        
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.6.3'
@@ -37,6 +34,11 @@ allprojects {
     repositories {
         google()
         jcenter()
+
+        maven {
+            url "https://jitpack.io"
+        }
+        //自己的maven私服
         maven {
             url'http://localhost:8081/repository/study_release/'
             credentials{
